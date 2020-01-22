@@ -27,7 +27,6 @@ df.dropna(inplace=True)
 X = np.array(df.drop(['label'],1))
 y = np.array(df['label'])
 X = preprocessing.scale(X)
-y = np.array(df['label'])
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 clf = svm.SVR(kernel='poly')    # defalut is 'linear'
